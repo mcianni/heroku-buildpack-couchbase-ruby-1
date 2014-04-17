@@ -257,7 +257,8 @@ private
   # @return [Boolean] true if it installs the vendored ruby and false otherwise
   def install_ruby
     return false unless ruby_version
-
+    return true
+    
     invalid_ruby_version_message = <<ERROR
 Invalid RUBY_VERSION specified: #{ruby_version}
 Valid versions: #{ruby_versions.join(", ")}
